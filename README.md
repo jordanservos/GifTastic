@@ -10,6 +10,8 @@ The project requirements included building a dynamic web page using the GIPHY AP
 
 Select any of the buttons available on the page load to see some awesome Outdoor related GIFs! Users can add new buttons dynamically by typing a topic of their choice in the search field. Once a new button is added, it can be clicked to see new GIFs!
 
+Click on the link to play! - https://jordanservos.github.io/GifTastic/
+
 ## Built With 
 
 * HTML5
