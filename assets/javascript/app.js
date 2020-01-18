@@ -3,7 +3,7 @@ $(document).ready(function() {
     //create GIF selection array
 
     var gifOptions = [
-        "Hiking", "Fishing", "Hunting", "Snow Sports", "Water Sports", "Wildlife Viewing", "Trail Sports", "Off-roading", "Camping"
+        "Hiking", "Fishing", "Hunting", "Snowboarding", "Kayaking", "Wildlife Viewing", "Mountain Climbing", "Off-roading", "Camping"
     ]
 
     console.log(gifOptions)
@@ -13,7 +13,7 @@ $(document).ready(function() {
     function displayGif() {
         $("#gif-collection").empty();
         var name = $(this).attr("data-name");
-        var gifLimit = 15;
+        var gifLimit = 10;
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10"
 
         //build ajax call
@@ -28,7 +28,7 @@ $(document).ready(function() {
             for (var j = 0; j < results.length; j++) {
                 var gifsDiv = $("<div class='gif'>");
                 var rating = results[j].rating;
-                var ratingP = $("<p>").text("Rating: " + rating);
+                var ratingP = $("<p>").text("Rating: " + rating.toUpperCase());
                 var gifImage = $("<img class='gif'>");
                 gifImage.attr({
                     src: results[j].images.fixed_height_still.url,
